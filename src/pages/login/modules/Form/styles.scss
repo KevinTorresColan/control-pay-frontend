@@ -1,0 +1,21 @@
+.m-form-module {
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0px 4px 6px 0px #0000000D, 0px 10px 15px 0px #0000001A;
+  max-width: 420px;
+  border-radius: 12px;
+  background-color: yellow;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__box {
+    margin-bottom: 24px;
+    
+    label {
+      margin-bottom: 12px;
+    }
+  }
+}

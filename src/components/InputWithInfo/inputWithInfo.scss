@@ -1,0 +1,11 @@
+.c-input-whith-info {
+  display: flex;
+  flex-direction: column;
+
+  &--error {
+    input {
+      border-color: red;
+    }
+  }
+
+}

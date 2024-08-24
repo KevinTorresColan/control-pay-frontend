@@ -1,0 +1,12 @@
+.m-wallpaper {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .m-wallpaper {
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+  }
+}
