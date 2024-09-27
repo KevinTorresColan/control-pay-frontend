@@ -15,3 +15,5 @@ export type {
   PropsWithAs,
   Ref,
 } from "./Polymorphic";
+export type { IApiResponse } from './apiResponse';
+export type { AlertTypes, IAlert } from './alertTypes';

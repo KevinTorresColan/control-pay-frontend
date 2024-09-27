@@ -1,1 +1,1 @@
-export { productRoutes } from "./product";
+export { authRoutes } from "./login";
