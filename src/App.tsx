@@ -1,9 +1,10 @@
 import { Suspense } from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
+import { Loading } from "./components";
 
 const App = () => (
-  <Suspense fallback={<h1>Cargando...</h1>}>
+  <Suspense fallback={<Loading />}>
     <RouterProvider router={router} />
   </Suspense>
 );

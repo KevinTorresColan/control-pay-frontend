@@ -1,0 +1,1 @@
+export { default as HeadquarterCreateUpdatePage } from './page/HeadquarterCreateUpdatePage';

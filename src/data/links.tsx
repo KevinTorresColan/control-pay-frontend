@@ -6,7 +6,16 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import BadgeIcon from "@mui/icons-material/Badge";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
-import { roleRoutes, studentsRoutes, userRoutes } from "@/routes";
+import {
+  roleRoutes,
+  studentsRoutes,
+  userRoutes,
+  documentTypeRoutes,
+  headquarterRoutes,
+  bankRoutes,
+  paymentTypeRoutes,
+  paymentoutes,
+} from "@/routes";
 
 export const links = [
   {
@@ -27,26 +36,26 @@ export const links = [
   {
     text: "Pagos",
     icon: <PointOfSaleIcon />,
-    path: "/usuarios",
+    path: paymentoutes.get,
   },
   {
     text: "Tipo de pago",
     icon: <PaymentsIcon />,
-    path: "/usuarios",
+    path: paymentTypeRoutes.get,
   },
   {
     text: "Cuentas bancarias",
     icon: <AccountBalanceIcon />,
-    path: "/usuarios",
+    path: bankRoutes.get,
   },
   {
     text: "Sedes",
     icon: <HomeWorkIcon />,
-    path: "/usuarios",
+    path: headquarterRoutes.get,
   },
   {
     text: "Tipo de documentos",
     icon: <BadgeIcon />,
-    path: "/usuarios",
+    path: documentTypeRoutes.get,
   },
 ];

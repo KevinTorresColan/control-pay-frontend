@@ -1,0 +1,1 @@
+export { useHeadquarter } from './useHeadquarter';

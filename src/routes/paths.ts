@@ -4,7 +4,7 @@ export const loginRoutes = {
 };
 
 export const homeRoutes = {
-  home: '/'
+  home: '/menu'
 };
 
 export const userRoutes = {
@@ -23,4 +23,34 @@ export const studentsRoutes = {
   get: '/alumno',
   create: '/alumno/crear',
   update: '/alumno/:id',
+};
+
+export const documentTypeRoutes = {
+  get: '/tipo-documento',
+  create: '/tipo-documento/crear',
+  update: '/tipo-documento/:id',
+};
+
+export const headquarterRoutes = {
+  get: '/sede',
+  create: '/sede/crear',
+  update: '/sede/:id',
+};
+
+export const bankRoutes = {
+  get: '/banco',
+  create: '/banco/crear',
+  update: '/banco/:id',
+};
+
+export const paymentTypeRoutes = {
+  get: '/tipo-pago',
+  create: '/tipo-pago/crear',
+  update: '/tipo-pago/:id',
+};
+
+export const paymentoutes = {
+  get: '/pago',
+  create: '/pago/crear',
+  update: '/pago/:id',
 };

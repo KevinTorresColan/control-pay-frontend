@@ -1,9 +1,11 @@
+// import { Navigate } from "react-router-dom";
 import { withoutAuthentication } from "@/util";
 import { userRoute } from "./user.router";
 import { roleRoute } from "./role.router";
-import { Navigate } from "react-router-dom";
-import { homeRoutes } from "./paths";
+// import { homeRoutes } from "./paths";
 import { studentsRoute } from "./students.router";
+import { documentTypeRoute } from "./documentType.router";
+import { headquarterRoute } from "./headquarter.router";
 
 export const menuRoute = {
   path: "",
@@ -16,7 +18,8 @@ export const menuRoute = {
   loader: withoutAuthentication,
   children: [
     {
-      index: true,
+      // index: true,
+      path: "/menu",
       async lazy() {
         const { Welcome } = await import(
           /* webpackChunkName: "LazyDasboard" */ "@/pages"
@@ -27,9 +30,11 @@ export const menuRoute = {
     ...userRoute,
     ...roleRoute,
     ...studentsRoute,
-    {
-      path: "*",
-      element: <Navigate to={homeRoutes.home} replace />,
-    },
+    ...documentTypeRoute,
+    ...headquarterRoute,
+    // {
+    //   path: "*",
+    //   element: <Navigate to={homeRoutes.home} replace />,
+    // },
   ],
 };

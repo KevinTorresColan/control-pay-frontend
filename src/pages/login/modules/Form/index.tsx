@@ -1,19 +1,21 @@
-import { FormEvent, useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { InputAdornment, IconButton } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { Alert, Snackbar, TextField } from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
+import LoginIcon from "@mui/icons-material/Login";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { InputAdornment, IconButton } from "@mui/material";
-import LoginIcon from "@mui/icons-material/Login";
-import { useAuth } from "../../hooks";
-import LoadingButton from "@mui/lab/LoadingButton";
-import { useAlert } from "@/hooks";
-import { pipe } from "@/util";
-import { IApiResponse } from "@/interface";
-import { IUserLogin } from "../../interfaces";
-import "./styles.scss";
+import { Alert, FormController, FormWrapper } from "@/components";
 import { homeRoutes } from "@/routes";
+import { IApiResponse, IFormWrapperRef } from "@/interface";
+import { ILogin, IUserLogin } from "../../interfaces";
+import { pipe } from "@/util";
+import { schemaLogin } from "../../schema";
+import { useAlert } from "@/hooks";
+import { useAuth } from "../../hooks";
+import "./styles.scss";
 
 const prefix = "m-form-module";
 
@@ -24,15 +26,9 @@ const FormModule = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
-  const [dataFields, setDataFields] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = target;
-    setDataFields((preValue) => ({ ...preValue, [name]: value }));
-  };
+  const refForm = useRef<IFormWrapperRef<ILogin>>(null);
+  const form = useForm();
+  const schema = schemaLogin();
 
   const handleAlert = (data: IApiResponse<IUserLogin>) => {
     generateAlert({ ...data });
@@ -44,38 +40,29 @@ const FormModule = () => {
     return data;
   };
 
-  const submit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    await login(dataFields).then(pipe(handleAlert, getNavigate));
-  };
-
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
+  const handleSubmit = () => {
+    refForm.current!.submit(onSubmitSuccess);
+  };
+
+  const onSubmitSuccess = async (data: ILogin) => {
+    await login(data).then(pipe(handleAlert, getNavigate));
+  };
+
   return (
-    <>
-      <form className={prefix} onSubmit={submit}>
+    <FormWrapper methods={form} ref={refForm}>
+      <div className={prefix}>
         <h2 className={`${prefix}__title`}>Iniciar sesiòn</h2>
         <Grid container rowSpacing={2} className={`${prefix}__box`}>
           <Grid size={12}>
-            <TextField
-              label="Correo"
-              onChange={handleChange}
-              value={dataFields.email}
-              name="email"
-              type="email"
-              size="small"
-              fullWidth
-            />
+            <FormController schema={schema.email} label="Correo" />
           </Grid>
           <Grid size={12}>
-            <TextField
+            <FormController
+              schema={schema.password}
               label="Contraseña"
-              onChange={handleChange}
-              value={dataFields.password}
-              name="password"
               type={showPassword ? "text" : "password"}
-              size="small"
-              fullWidth
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -93,25 +80,18 @@ const FormModule = () => {
         </Grid>
         <LoadingButton
           loading={isLoading}
-          type="submit"
-          color="primary"
+          onClick={handleSubmit}
           variant="contained"
           endIcon={<LoginIcon />}
           fullWidth
         >
           Ingresar
         </LoadingButton>
-      </form>
-      <Snackbar
-        open={openSnackbar}
-        autoHideDuration={6000}
-        onClose={handleClose}
-      >
-        <Alert severity={alertType} variant="filled" sx={{ width: "100%" }}>
-          {messageAlert}
-        </Alert>
-      </Snackbar>
-    </>
+      </div>
+      <Alert open={openSnackbar} onClose={handleClose} type={alertType}>
+        {messageAlert}
+      </Alert>
+    </FormWrapper>
   );
 };
 

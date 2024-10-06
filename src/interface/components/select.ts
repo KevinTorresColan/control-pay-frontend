@@ -1,8 +1,21 @@
-import { IClassName } from "../className";
+import { ChangeEvent } from "react";
+import { FormControlProps, SelectChangeEvent, SelectProps } from "@mui/material";
+import { StateEnum } from "@/enum";
 
-export interface ISelect
-  extends IClassName,
-    React.SelectHTMLAttributes<HTMLSelectElement> {
-  fullwidth?: boolean;
-  pageSizeOptions: number[];
+export interface IComboSate {
+  id: StateEnum;
+  text: string;
+}
+
+export interface ISelect {
+  data: IComboSate[];
+  disabled?: boolean;
+  formControlProps?: FormControlProps;
+  handleChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | SelectChangeEvent<unknown>) => void;
+  label?: string;
+  name?: string;
+  selectProps?: SelectProps;
+  value: string;
+  error?: boolean;
+  helperText?: string;
 }

@@ -1,0 +1,1 @@
+export type ISchemaLogin = 'email' | 'password';

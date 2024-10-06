@@ -34,10 +34,11 @@ import removeCookies from "../../services/cookies/removeCookies";
 import { loginRoutes } from "@/routes";
 import { useNavigate } from "react-router-dom";
 import { links } from "@/data";
+import { Tooltip } from "@mui/material";
 
 const prefix = "c-layout";
 
-const drawerWidth = 260;
+const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -146,7 +147,7 @@ export const Layout = ({ children }: ILayout) => {
   }, []);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box>
       <AppBar position="fixed" open={open}>
         <Toolbar>
           <IconButton
@@ -192,36 +193,41 @@ export const Layout = ({ children }: ILayout) => {
         <List>
           {links.map(({ text, icon, path }, index) => (
             <div key={index}>
-              <ListItem disablePadding sx={{ display: "block" }}>
-                <ListItemButton
-                  onClick={() => navigateView(path)}
-                  sx={[
-                    { minHeight: 48, px: 2.5 },
-                    open
-                      ? { justifyContent: "initial" }
-                      : { justifyContent: "space-between" },
-                  ]}
-                >
-                  <ListItemIcon
+              <Tooltip placement="right" title={open ? "" : text}>
+                <ListItem disablePadding sx={{ display: "block" }}>
+                  <ListItemButton
+                    onClick={() => navigateView(path)}
                     sx={[
-                      { minWidth: 0, justifyContent: "center" },
-                      open ? { mr: 3 } : { mr: "auto" },
+                      { minHeight: 48, px: 2.5 },
+                      open
+                        ? { justifyContent: "initial" }
+                        : { justifyContent: "space-between" },
                     ]}
                   >
-                    {icon}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text}
-                    sx={[open ? { opacity: 1 } : { opacity: 0 }]}
-                  />
-                </ListItemButton>
-              </ListItem>
+                    <ListItemIcon
+                      sx={[
+                        { minWidth: 0, justifyContent: "center" },
+                        open ? { mr: 3 } : { mr: "auto" },
+                      ]}
+                    >
+                      {icon}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={text}
+                      sx={[open ? { opacity: 1 } : { opacity: 0 }]}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </Tooltip>
             </div>
           ))}
         </List>
-        <Divider />
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box
+        component="main"
+        p={{ xs: 1, sm: 2, lg: 3 }}
+        ml={{ xs: "56px", sm: "64px" }}
+      >
         <DrawerHeader />
         {children}
       </Box>

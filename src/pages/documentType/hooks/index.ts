@@ -1,0 +1,1 @@
+export { useDocumentType } from './useDocumentType';

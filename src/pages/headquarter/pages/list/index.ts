@@ -1,0 +1,1 @@
+export { default as HeadquarterListPage } from './page/HeadquarterListPage';
