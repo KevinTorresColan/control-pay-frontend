@@ -1,0 +1,1 @@
+export { default as PaymentTypeCreateUpdatePage } from './page/PaymentTypeCreateUpdatePage';

@@ -1,0 +1,1 @@
+export { default as PaymentTypeListPage } from './page/PaymentTypeListPage';

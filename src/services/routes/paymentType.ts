@@ -1,0 +1,1 @@
+export const paymentTypeRoutes = '/payment-type';

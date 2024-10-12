@@ -6,6 +6,7 @@ import { roleRoute } from "./role.router";
 import { studentsRoute } from "./students.router";
 import { documentTypeRoute } from "./documentType.router";
 import { headquarterRoute } from "./headquarter.router";
+import { paymentTypeRoute } from "./paymentType.router";
 
 export const menuRoute = {
   path: "",
@@ -32,6 +33,7 @@ export const menuRoute = {
     ...studentsRoute,
     ...documentTypeRoute,
     ...headquarterRoute,
+    ...paymentTypeRoute,
     // {
     //   path: "*",
     //   element: <Navigate to={homeRoutes.home} replace />,
