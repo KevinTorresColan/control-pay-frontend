@@ -76,11 +76,11 @@ export const usePaymentType = () => {
 
   return {
     createPaymentType,
-    paymentsType,
-    paymentTypeById,
     isLoadingCreate,
     isLoadingList,
     isLoadingUpdate,
+    paymentsType,
+    paymentTypeById,
     updatePaymentType
   }
 }

@@ -1,0 +1,1 @@
+export { default as RoleCreateUpdatePage } from './page/RoleCreateUpdatePage';

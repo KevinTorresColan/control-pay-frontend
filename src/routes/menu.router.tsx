@@ -1,12 +1,12 @@
 // import { Navigate } from "react-router-dom";
 import { withoutAuthentication } from "@/util";
 import { userRoute } from "./user.router";
-import { roleRoute } from "./role.router";
 // import { homeRoutes } from "./paths";
 import { studentsRoute } from "./students.router";
 import { documentTypeRoute } from "./documentType.router";
 import { headquarterRoute } from "./headquarter.router";
 import { paymentTypeRoute } from "./paymentType.router";
+import { roleRoute } from "./role.router";
 
 export const menuRoute = {
   path: "",

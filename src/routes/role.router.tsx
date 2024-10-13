@@ -1,25 +1,44 @@
+import { RouteObject } from "react-router-dom";
 import { withoutAuthentication } from "@/util";
 import { roleRoutes } from "./paths";
 
-export const roleRoute = [
+const loadCreateUpdatePage = async () => {
+  const { RoleCreateUpdatePage } = await import(
+    /* webpackChunkName: "LazyRoleCreateUpdatePage" */ "@/pages/role/pages/createUpdate"
+  );
+  return { Component: RoleCreateUpdatePage };
+};
+
+export const roleRoute: RouteObject[] = [
   {
     path: roleRoutes.get,
     async lazy() {
-      const { RoleListPage } = await import(
-        /* webpackChunkName: "LazyRoleList" */ "@/pages/role/list"
-      );
-      return { Component: RoleListPage };
+      const [{ RoleListProvider }, { RoleListPage }] = await Promise.all([
+        import(
+          /* webpackChunkName: "LazyRoleListProvider" */ "@/pages/role/pages/list/context"
+        ),
+        import(
+          /* webpackChunkName: "LazyRoleListPage" */ "@/pages/role/pages/list"
+        ),
+      ]);
+      return {
+        Component: () => (
+          <RoleListProvider>
+            <RoleListPage />
+          </RoleListProvider>
+        ),
+      };
     },
     loader: withoutAuthentication,
   },
   {
     path: roleRoutes.create,
-    element: <h1>Crear roles</h1>,
+    lazy: loadCreateUpdatePage,
     loader: withoutAuthentication,
   },
   {
     path: roleRoutes.update,
-    element: <h1>Actualizar roles</h1>,
+    lazy: loadCreateUpdatePage,
     loader: withoutAuthentication,
   },
 ];
