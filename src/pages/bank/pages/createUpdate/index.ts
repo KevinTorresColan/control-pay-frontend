@@ -1,0 +1,1 @@
+export { default as BankCreateUpdatePage } from './page/BankCreateUpdatePage';

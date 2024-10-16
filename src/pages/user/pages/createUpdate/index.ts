@@ -1,0 +1,1 @@
+export { default as UserCreateUpdatePage } from './page/UserCreateUpdatePage';

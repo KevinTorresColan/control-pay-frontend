@@ -7,6 +7,7 @@ import { documentTypeRoute } from "./documentType.router";
 import { headquarterRoute } from "./headquarter.router";
 import { paymentTypeRoute } from "./paymentType.router";
 import { roleRoute } from "./role.router";
+import { bankRoute } from "./bank.router";
 
 export const menuRoute = {
   path: "",
@@ -23,7 +24,7 @@ export const menuRoute = {
       path: "/menu",
       async lazy() {
         const { Welcome } = await import(
-          /* webpackChunkName: "LazyDasboard" */ "@/pages"
+          /* webpackChunkName: "LazyWelcome" */ "@/pages"
         );
         return { Component: Welcome };
       },
@@ -34,6 +35,7 @@ export const menuRoute = {
     ...documentTypeRoute,
     ...headquarterRoute,
     ...paymentTypeRoute,
+    ...bankRoute,
     // {
     //   path: "*",
     //   element: <Navigate to={homeRoutes.home} replace />,

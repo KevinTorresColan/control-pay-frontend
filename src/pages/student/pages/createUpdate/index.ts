@@ -1,0 +1,1 @@
+export { default as StudentCreateUpdatePage } from './page/StudentCreateUpdatePage';

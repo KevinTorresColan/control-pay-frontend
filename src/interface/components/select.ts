@@ -1,6 +1,7 @@
 import { ChangeEvent } from "react";
 import { FormControlProps, SelectChangeEvent, SelectProps } from "@mui/material";
 import { StateEnum } from "@/enum";
+import { ICombo } from '../combo';
 
 export interface IComboSate {
   id: StateEnum;
@@ -8,7 +9,7 @@ export interface IComboSate {
 }
 
 export interface ISelect {
-  data: IComboSate[];
+  data: IComboSate[] | ICombo[];
   disabled?: boolean;
   formControlProps?: FormControlProps;
   handleChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | SelectChangeEvent<unknown>) => void;

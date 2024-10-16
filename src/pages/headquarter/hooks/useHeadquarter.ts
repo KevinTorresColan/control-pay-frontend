@@ -19,7 +19,7 @@ export const useHeadquarter = () => {
 
   const headquarters = async (params: IHeadquarterFilter): Promise<IApiResponse<IHeadquarterListResponse>> => {
     setIsLoadingList(true);
-    const url =  generateQuery(params, headquarterRoutes.getAll);
+    const url =  generateQuery(params, headquarterRoutes);
 
     try {
       const response: AxiosResponse<IApiResponse<IHeadquarterListResponse>> = await getApi(url);
@@ -36,7 +36,7 @@ export const useHeadquarter = () => {
   const headquarterById = async (id: string): Promise<IApiResponse<IHeadquarter>> => {
     setIsLoadingUpdate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await getApi(`${headquarterRoutes.getById}/${id}`);
+      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await getApi(`${headquarterRoutes}/${id}`);
       const { data, message, status } = response.data ;
       
       return { data, message, status };
@@ -50,7 +50,7 @@ export const useHeadquarter = () => {
   const createHeadquarter = async (params: IHeadquarterCreateUpdate): Promise<IApiResponse<IHeadquarter>> => {
     setIsLoadingCreate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await postApi(headquarterRoutes.create, params);
+      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await postApi(headquarterRoutes, params);
       const { data, message, status } = response.data ;
       
       return { data, message, status };
@@ -64,7 +64,7 @@ export const useHeadquarter = () => {
   const updateHeadquarter = async (id: string ,params: IHeadquarterCreateUpdate): Promise<IApiResponse<IHeadquarter>> => {
     setIsLoadingCreate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await putApi(`${headquarterRoutes.update}/${id}`, params);
+      const response: AxiosResponse<IApiResponse<IHeadquarter>> = await putApi(`${headquarterRoutes}/${id}`, params);
       const { data, message, status } = response.data ;
       
       return { data, message, status };

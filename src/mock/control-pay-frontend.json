@@ -1,0 +1,1125 @@
+{
+  "uuid": "22d74d62-dce1-4038-acb9-269efb6bef11",
+  "lastMigration": 32,
+  "name": "Control pay frontend",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 5000,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "c492adac-10be-44d9-87c4-4447b6520766",
+      "name": "Rol",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "607ca02e-dbfa-4b3b-b209-fa6879b6cbc2"
+        },
+        {
+          "type": "route",
+          "uuid": "cbddd14a-d622-413b-88a2-0284195c7f64"
+        },
+        {
+          "type": "route",
+          "uuid": "866fc5b5-67be-491b-af1e-3ed07d22cc9e"
+        },
+        {
+          "type": "route",
+          "uuid": "2fd38810-a0c6-43d4-9036-de0c863d2a11"
+        },
+        {
+          "type": "route",
+          "uuid": "2ffe0a67-8be3-4434-bc9e-fb07da41b541"
+        }
+      ]
+    },
+    {
+      "uuid": "8aeb25a3-b0a8-4022-b56d-8f0fbeb77594",
+      "name": "Tipo de pago",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "eed36f9a-b431-45de-b22f-966f8782af97"
+        },
+        {
+          "type": "route",
+          "uuid": "ba765c4f-ebd6-4d9c-9657-1d45b482c114"
+        },
+        {
+          "type": "route",
+          "uuid": "917232ca-b4ac-4977-bd64-338a8b073d64"
+        },
+        {
+          "type": "route",
+          "uuid": "2616a806-8d45-46f1-b58c-9314d0a298d1"
+        }
+      ]
+    },
+    {
+      "uuid": "133ada11-a561-42fe-9123-a53deec3c070",
+      "name": "Sede",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "f7ab46c7-c3b8-4452-b48d-81bef4f2218f"
+        },
+        {
+          "type": "route",
+          "uuid": "9846545b-a654-45f9-99d8-6a6b4bc8f89f"
+        },
+        {
+          "type": "route",
+          "uuid": "8ca56a53-81fe-491e-b82f-04ce21c1c3d0"
+        },
+        {
+          "type": "route",
+          "uuid": "ea5f726e-b6a3-4530-afc8-759da6081da9"
+        },
+        {
+          "type": "route",
+          "uuid": "a4c14a40-754d-4562-a02c-377977038c85"
+        }
+      ]
+    },
+    {
+      "uuid": "b2f0b79a-2a25-466a-9021-753806aab1e4",
+      "name": "Tipo de documento",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "6cb5911f-6a7d-4cf1-bd14-38edb0ff1fa2"
+        },
+        {
+          "type": "route",
+          "uuid": "2b063e31-56f4-47b5-9c95-a63b9b4401a3"
+        },
+        {
+          "type": "route",
+          "uuid": "0beefec4-3c22-411f-8169-d3d6a26b01f0"
+        },
+        {
+          "type": "route",
+          "uuid": "aaddbadf-0873-493f-a41a-6be74adca7eb"
+        },
+        {
+          "type": "route",
+          "uuid": "7dd5e71c-a65d-4ece-855d-1c8eefa8054f"
+        }
+      ]
+    },
+    {
+      "uuid": "0f6bbe81-97c7-43c1-bed4-3f1c4737a4fa",
+      "name": "Cuenta bancaria",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "5a53b0fa-3aab-4ce2-9b39-2222840d222b"
+        },
+        {
+          "type": "route",
+          "uuid": "076b9a07-b1dc-44aa-92e5-336768206b9f"
+        },
+        {
+          "type": "route",
+          "uuid": "5ce9e812-139b-4873-bb66-6e000b275816"
+        },
+        {
+          "type": "route",
+          "uuid": "176ba5ab-583c-4e0e-9e43-8eaab3a64aec"
+        }
+      ]
+    },
+    {
+      "uuid": "4c88a259-a5f0-4879-9a98-3166b92291d1",
+      "name": "User",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "7c27f46b-06b7-49bd-b42e-2df37fff326c"
+        },
+        {
+          "type": "route",
+          "uuid": "03362731-1323-4048-8369-d5d001d54d68"
+        },
+        {
+          "type": "route",
+          "uuid": "3e578074-5c53-499c-b2db-ef5b02966863"
+        },
+        {
+          "type": "route",
+          "uuid": "5cb229d8-ab49-42e8-8b50-77d28900d83c"
+        }
+      ]
+    },
+    {
+      "uuid": "d12b383d-7c9d-436d-92c2-5549a400396d",
+      "name": "Alumnos",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "c2c200d4-f1d5-443b-81c0-a9d964d98148"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "857f53bb-d9b0-454b-93ff-8cb1f1d1f810",
+      "type": "http",
+      "documentation": "OK",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "a99960f4-1ac3-4a92-aa55-8df5c0e42e29",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"email\": \"ktorrescolan@gmail.com\",\n    \"id\": 1,\n    \"lastName\": \"Torres Colan\",\n    \"name\": \"Kevin Carlos\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibGFzdE5hbWUiOiJUb3JyZXMgQ29sYW4iLCJuYW1lIjoiS2V2aW4gQ2FybG9zIn0.w0eHDH0z25sKipO2kn5q_P9DNFAOLbmx6VJ5vaB_yuM\"\n  }, \n  \"status\": 200 \n}",
+          "latency": 2500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "6cb5911f-6a7d-4cf1-bd14-38edb0ff1fa2",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "document-type",
+      "responses": [
+        {
+          "uuid": "4fe4a240-15ca-4015-a81d-a5155f8cd9ce",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \"id\": 1, \"name\": \"DNI\", \"state\": \"Activo\" },\n      { \"id\": 2, \"name\": \"Ruc\", \"state\": \"Activo\" }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "033b30b4-3f70-4d15-8898-7c5ddcadf529",
+          "body": "{}",
+          "latency": 1500,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "aaddbadf-0873-493f-a41a-6be74adca7eb",
+      "type": "http",
+      "documentation": "Crear",
+      "method": "post",
+      "endpoint": "document-type",
+      "responses": [
+        {
+          "uuid": "5574b7f1-9637-472c-a9a6-5fc23e7522cb",
+          "body": "{ \n  \"message\": \"Tipo de documento creado\", \n  \"data\": {\n    \"id\": 3,\n    \"name\": \"nombre\",\n    \"state\": \"Activo\"\n    }, \n  \"status\": 200 \n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "78019943-49b3-449d-bce5-cb36d5088267",
+          "body": "{}",
+          "latency": 2000,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "7dd5e71c-a65d-4ece-855d-1c8eefa8054f",
+      "type": "http",
+      "documentation": "Update",
+      "method": "put",
+      "endpoint": "document-type/1",
+      "responses": [
+        {
+          "uuid": "dacfbf61-153d-4dfa-a990-dbe62ecb83b1",
+          "body": "{ \n  \"message\": \"Tipo de documento actualizado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"nombre\",\n    \"state\": \"Activo\"\n    }, \n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2b063e31-56f4-47b5-9c95-a63b9b4401a3",
+      "type": "http",
+      "documentation": "get by id",
+      "method": "get",
+      "endpoint": "document-type/1",
+      "responses": [
+        {
+          "uuid": "af7ca4c3-b2b9-4adb-9b18-e37a3fd1b617",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1, \n    \"name\": \"DNI\", \n    \"state\": \"1\"\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "f7ab46c7-c3b8-4452-b48d-81bef4f2218f",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "headquarter",
+      "responses": [
+        {
+          "uuid": "9ed1a7a5-9fa1-45ed-ae8d-d993040bdf5e",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1, \n        \"address\": \"av. canta\",\n        \"name\": \"Bertelo\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2, \n        \"address\": \"av. peru\",\n        \"name\": \"Colegio esperanza\", \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "9846545b-a654-45f9-99d8-6a6b4bc8f89f",
+      "type": "http",
+      "documentation": "get by id",
+      "method": "get",
+      "endpoint": "headquarter/1",
+      "responses": [
+        {
+          "uuid": "e4384111-258f-4d82-942c-3cdd2fc1afbb",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1, \n    \"address\": \"av. canta\",\n    \"name\": \"Bertelo\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ea5f726e-b6a3-4530-afc8-759da6081da9",
+      "type": "http",
+      "documentation": "Crear",
+      "method": "post",
+      "endpoint": "headquarter",
+      "responses": [
+        {
+          "uuid": "460ccfa9-2b44-4058-a3e2-f97353b7ee73",
+          "body": "{ \n  \"message\": \"Sede creada\", \n  \"data\": {\n    \"id\": 1, \n    \"address\": \"av. canta\",\n    \"name\": \"Bertelo\", \n    \"state\": \"Activo\" \n    }, \n  \"status\": 200 \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "a4c14a40-754d-4562-a02c-377977038c85",
+      "type": "http",
+      "documentation": "Update",
+      "method": "put",
+      "endpoint": "headquarter/1",
+      "responses": [
+        {
+          "uuid": "eb427414-dc46-451a-9c26-f57406a55172",
+          "body": "{ \n  \"message\": \"Sede actualizada\", \n  \"data\": {\n    \"id\": 1, \n    \"address\": \"av. canta\",\n    \"name\": \"Bertelo\", \n    \"state\": \"1\" \n    }, \n  \"status\": 200 \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "eed36f9a-b431-45de-b22f-966f8782af97",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "payment-type",
+      "responses": [
+        {
+          "uuid": "3db37eb4-55a0-4b24-a50b-606c83ba991e",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1,\n        \"name\": \"Efectivo\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2,\n        \"name\": \"Deposito bancario\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 3,\n        \"name\": \"Yape\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 4,\n        \"name\": \"Plin\", \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ba765c4f-ebd6-4d9c-9657-1d45b482c114",
+      "type": "http",
+      "documentation": "getById",
+      "method": "get",
+      "endpoint": "payment-type/1",
+      "responses": [
+        {
+          "uuid": "79298e1d-d570-41c8-877d-b3f7b7a5f8c3",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Efectivo\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "917232ca-b4ac-4977-bd64-338a8b073d64",
+      "type": "http",
+      "documentation": "Crear",
+      "method": "post",
+      "endpoint": "payment-type",
+      "responses": [
+        {
+          "uuid": "da3549f5-5d5e-4a9c-b1a0-a202b4ae8038",
+          "body": "{ \n  \"message\": \"Tipo de pago creado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Efectivo\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2616a806-8d45-46f1-b58c-9314d0a298d1",
+      "type": "http",
+      "documentation": "Update",
+      "method": "put",
+      "endpoint": "payment-type/1",
+      "responses": [
+        {
+          "uuid": "02d5e328-cd77-434e-a7e8-846a64ecd4d4",
+          "body": "{ \n  \"message\": \"Tipo de pago actualizado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Efectivo\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "607ca02e-dbfa-4b3b-b209-fa6879b6cbc2",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "role",
+      "responses": [
+        {
+          "uuid": "b2c18850-6ef8-4e5a-9d93-3f7a2630f118",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1,\n        \"name\": \"Administrador\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2,\n        \"name\": \"Cajera\", \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "cbddd14a-d622-413b-88a2-0284195c7f64",
+      "type": "http",
+      "documentation": "getById",
+      "method": "get",
+      "endpoint": "role/1",
+      "responses": [
+        {
+          "uuid": "d1b8e3e0-e877-4742-b687-a8ed290c00eb",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Administrador\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2fd38810-a0c6-43d4-9036-de0c863d2a11",
+      "type": "http",
+      "documentation": "Crear",
+      "method": "post",
+      "endpoint": "role",
+      "responses": [
+        {
+          "uuid": "02663cfb-713a-4339-a363-c184265ffe63",
+          "body": "{ \n  \"message\": \"Rol creado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Administrador\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2ffe0a67-8be3-4434-bc9e-fb07da41b541",
+      "type": "http",
+      "documentation": "Update",
+      "method": "put",
+      "endpoint": "role/1",
+      "responses": [
+        {
+          "uuid": "5358c924-762e-4fc3-b47d-ee804c8fc107",
+          "body": "{ \n  \"message\": \"Rol actualizado\", \n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Administrador\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5a53b0fa-3aab-4ce2-9b39-2222840d222b",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "bank",
+      "responses": [
+        {
+          "uuid": "12948b0b-1be2-44bf-9cb0-d95f0f3c1169",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1, \n        \"account\": \"225-564154-45456465\",\n        \"cci\": \"00-001-225-564154-45456465\",\n        \"name\": \"Banco de crédito\",\n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2, \n        \"account\": \"225-564154-45456465\",\n        \"cci\": \"00-001-225-564154-45456465\",\n        \"name\": \"Interbank\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 3, \n        \"account\": \"225-564154-45456465\",\n        \"cci\": \"00-001-225-564154-45456465\",\n        \"name\": \"Scotiabnak\", \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "076b9a07-b1dc-44aa-92e5-336768206b9f",
+      "type": "http",
+      "documentation": "get by id",
+      "method": "get",
+      "endpoint": "bank/1",
+      "responses": [
+        {
+          "uuid": "9681dc2a-ebdd-42e5-8173-f19ad46a566b",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1, \n    \"account\": \"225-564154-45456465\",\n    \"cci\": \"00-001-225-564154-45456465\",\n    \"name\": \"Banco de crédito\",\n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5ce9e812-139b-4873-bb66-6e000b275816",
+      "type": "http",
+      "documentation": "Create",
+      "method": "post",
+      "endpoint": "bank",
+      "responses": [
+        {
+          "uuid": "4b4b7f9e-5260-482f-a979-a6b159174da2",
+          "body": "{ \n  \"message\": \"Cuenta bancaria creada\", \n  \"data\": {\n    \"id\": 1, \n    \"account\": \"225-564154-45456465\",\n    \"cci\": \"00-001-225-564154-45456465\",\n    \"name\": \"Banco de crédito\",\n    \"state\": \"1\" \n  }, \n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "176ba5ab-583c-4e0e-9e43-8eaab3a64aec",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "bank/1",
+      "responses": [
+        {
+          "uuid": "06b3bc69-4eb5-4541-bd63-1eb0150fc416",
+          "body": "{ \n  \"message\": \"Cuenta bancaria actualizada\", \n  \"data\": {\n    \"id\": 1, \n    \"account\": \"225-564154-45456465\",\n    \"cci\": \"00-001-225-564154-45456465\",\n    \"name\": \"Banco de crédito\",\n    \"state\": \"1\" \n  }, \n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "7c27f46b-06b7-49bd-b42e-2df37fff326c",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "user",
+      "responses": [
+        {
+          "uuid": "d0ac2155-4418-4aed-bb93-b47afbaff787",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1, \n        \"documentNumber\": \"58462262\",\n        \"names\": \"Jorge Luis\", \n        \"lastName\": \"Torres Colan\", \n        \"email\": \"jtorrescolan@gmail.com\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2, \n        \"documentNumber\": \"15952533\",\n        \"names\": \"Jorge Erneso\", \n        \"lastName\": \"Torres Medrano\", \n        \"email\": \"cheche6421@gmail.com\",  \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "03362731-1323-4048-8369-d5d001d54d68",
+      "type": "http",
+      "documentation": "get by id",
+      "method": "get",
+      "endpoint": "user/1",
+      "responses": [
+        {
+          "uuid": "407d5f1b-ada7-4892-a29d-ab0218f63467",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"id\": 1, \n    \"idDocumentsType\": 1,\n    \"idRole\": 1,\n    \"address\": \"Cll. la huaquilla 456\",\n    \"age\": 32,\n    \"birthday\": \"1992/07/31\",\n    \"cellPhone\": \"955496583\",\n    \"documentNumber\": \"58462262\",\n    \"names\": \"Jorge Luis\", \n    \"lastName\": \"Torres Colan\", \n    \"email\": \"jtorrescolan@gmail.com\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3e578074-5c53-499c-b2db-ef5b02966863",
+      "type": "http",
+      "documentation": "Create",
+      "method": "post",
+      "endpoint": "user",
+      "responses": [
+        {
+          "uuid": "e9d6cdc7-c55d-4aa3-b543-30d2d3cc0332",
+          "body": "{ \n  \"message\": \"Usuario creado\", \n  \"data\": {\n    \"id\": 1, \n    \"idDocumentsType\": 1,\n    \"idRole\": 1,\n    \"address\": \"Cll. la huaquilla 456\",\n    \"age\": 32,\n    \"birthday\": \"1992/07/31\",\n    \"cellPhone\": \"955496583\",\n    \"documentNumber\": \"58462262\",\n    \"names\": \"Jorge Luis\", \n    \"lastName\": \"Torres Colan\", \n    \"email\": \"jtorrescolan@gmail.com\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5cb229d8-ab49-42e8-8b50-77d28900d83c",
+      "type": "http",
+      "documentation": "Update",
+      "method": "put",
+      "endpoint": "user/1",
+      "responses": [
+        {
+          "uuid": "2f52a5da-a292-45ea-8d5b-eab587f086f2",
+          "body": "{ \n  \"message\": \"Usuario actualizado\", \n  \"data\": {\n    \"id\": 1, \n    \"idDocumentsType\": 1,\n    \"idRole\": 1,\n    \"address\": \"Cll. la huaquilla 456\",\n    \"age\": 32,\n    \"birthday\": \"1992/07/31\",\n    \"cellPhone\": \"955496583\",\n    \"documentNumber\": \"58462262\",\n    \"names\": \"Jorge Luis\", \n    \"lastName\": \"Torres Colan\", \n    \"email\": \"jtorrescolan@gmail.com\", \n    \"state\": \"1\" \n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "0beefec4-3c22-411f-8169-d3d6a26b01f0",
+      "type": "http",
+      "documentation": "Combo",
+      "method": "get",
+      "endpoint": "document-type/combo",
+      "responses": [
+        {
+          "uuid": "7e19ed87-d92b-420d-ac92-7ee8e65ba663",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": [\n    { \"id\": \"1\", \"text\": \"DNI\" },\n    { \"id\": \"2\", \"text\": \"Ruc\" }\n  ], \n\n  \"status\": 200 \n}",
+          "latency": 2500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "866fc5b5-67be-491b-af1e-3ed07d22cc9e",
+      "type": "http",
+      "documentation": "Combo",
+      "method": "get",
+      "endpoint": "role/combo",
+      "responses": [
+        {
+          "uuid": "6bd902e8-2e60-4bdd-8a83-6e0dd065b637",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": [\n    { \"id\": \"1\", \"text\": \"Administrador\" },\n    { \"id\": \"2\", \"text\": \"Cajera\" }\n  ], \n  \"status\": 200 \n}",
+          "latency": 2500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "8ca56a53-81fe-491e-b82f-04ce21c1c3d0",
+      "type": "http",
+      "documentation": "Combo",
+      "method": "get",
+      "endpoint": "headquarter/combo",
+      "responses": [
+        {
+          "uuid": "58bda6f4-8b59-4f15-8328-e0d1d93d0a71",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": [\n    { \"id\": \"1\", \"text\": \"Bertelo\" },\n    { \"id\": \"2\", \"text\": \"Canta\" }\n  ], \n\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c2c200d4-f1d5-443b-81c0-a9d964d98148",
+      "type": "http",
+      "documentation": "List all",
+      "method": "get",
+      "endpoint": "student",
+      "responses": [
+        {
+          "uuid": "0a8fe730-8d9e-4e99-b7ba-2f98fcc44d4e",
+          "body": "{ \n  \"message\": \"Acceso autorizado\", \n  \"data\": {\n    \"data\": [\n      { \n        \"id\": 1, \n        \"documentNumber\": \"58462262\",\n        \"tutorNames\": \"María Peres Alcantara\", \n        \"names\": \"Carlos\", \n        \"lastName\": \"Padilla Peres\", \n        \"email\": \"mperesalcantara@gmail.com\", \n        \"state\": \"Activo\" \n      },\n      { \n        \"id\": 2, \n        \"documentNumber\": \"15952533\",\n        \"tutorNames\": \"Jose Rodrigues Sullca\", \n        \"names\": \"Juan\", \n        \"lastName\": \"Rodrigues Aguilar\", \n        \"email\": \"jrodriguessullca@gmail.com\",  \n        \"state\": \"Activo\" \n      }\n    ], \n    \"count\": 20,\n    \"pageSize\": 10,\n    \"page\": 1\n  },\n  \"status\": 200 \n}",
+          "latency": 1500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "857f53bb-d9b0-454b-93ff-8cb1f1d1f810"
+    },
+    {
+      "type": "folder",
+      "uuid": "b2f0b79a-2a25-466a-9021-753806aab1e4"
+    },
+    {
+      "type": "folder",
+      "uuid": "8aeb25a3-b0a8-4022-b56d-8f0fbeb77594"
+    },
+    {
+      "type": "folder",
+      "uuid": "c492adac-10be-44d9-87c4-4447b6520766"
+    },
+    {
+      "type": "folder",
+      "uuid": "133ada11-a561-42fe-9123-a53deec3c070"
+    },
+    {
+      "type": "folder",
+      "uuid": "0f6bbe81-97c7-43c1-bed4-3f1c4737a4fa"
+    },
+    {
+      "type": "folder",
+      "uuid": "4c88a259-a5f0-4879-9a98-3166b92291d1"
+    },
+    {
+      "type": "folder",
+      "uuid": "d12b383d-7c9d-436d-92c2-5549a400396d"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

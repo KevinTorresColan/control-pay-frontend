@@ -19,3 +19,4 @@ export type {
 export type { IApiResponse } from './apiResponse';
 export type { AlertTypes, IAlert } from './alertTypes';
 export type { ISchema } from './schema';
+export type { ICombo } from './combo';

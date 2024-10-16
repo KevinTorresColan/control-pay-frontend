@@ -1,0 +1,1 @@
+export { default as BankListPage } from './page/BankListPage';

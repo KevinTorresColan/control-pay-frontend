@@ -1,3 +1,12 @@
 export { api, getApi, postApi, putApi } from "./api";
-export { authRoutes, documentTypeRoutes, headquarterRoutes, paymentTypeRoutes, roleRoutes } from "./routes";
+export { 
+  authRoutes, 
+  bankRoutes,
+  documentTypeRoutes, 
+  headquarterRoutes, 
+  paymentTypeRoutes, 
+  roleRoutes, 
+  userRoutes,
+  studentRoutes
+} from "./routes";
 export { setCookies, getCookies, removeCookies } from "./cookies";

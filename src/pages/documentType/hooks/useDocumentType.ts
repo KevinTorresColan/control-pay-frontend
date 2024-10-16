@@ -12,7 +12,7 @@ export const useDocumentType = () => {
 
   const documentsType = async (params: IDocumentTypeFilter): Promise<IApiResponse<IDocumentTypeListResponse>> => {
     setIsLoadingList(true);
-    const url =  generateQuery(params, documentTypeRoutes.getAll);
+    const url =  generateQuery(params, documentTypeRoutes);
 
     try {
       const response: AxiosResponse<IApiResponse<IDocumentTypeListResponse>> = await getApi(url);
@@ -29,7 +29,7 @@ export const useDocumentType = () => {
   const documentTypeById = async (id: string): Promise<IApiResponse<IDocumentType>> => {
     setIsLoadingUpdate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IDocumentType>> = await getApi(`${documentTypeRoutes.create}/${id}`);
+      const response: AxiosResponse<IApiResponse<IDocumentType>> = await getApi(`${documentTypeRoutes}/${id}`);
       const { data, message, status } = response.data ;
       
       return { data, message, status };
@@ -43,7 +43,7 @@ export const useDocumentType = () => {
   const createDocumentType = async (params: IDocumentTypeFilter): Promise<IApiResponse<IDocumentType>> => {
     setIsLoadingCreate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IDocumentType>> = await postApi(documentTypeRoutes.create, params);
+      const response: AxiosResponse<IApiResponse<IDocumentType>> = await postApi(documentTypeRoutes, params);
       const { data, message, status } = response.data ;
       
       return { data, message, status };
@@ -57,7 +57,7 @@ export const useDocumentType = () => {
   const updateDocumentType = async (id: string ,params: IDocumentTypeFilter): Promise<IApiResponse<IDocumentType>> => {
     setIsLoadingCreate(true);
     try {
-      const response: AxiosResponse<IApiResponse<IDocumentType>> = await putApi(`${documentTypeRoutes.create}/${id}`, params);
+      const response: AxiosResponse<IApiResponse<IDocumentType>> = await putApi(`${documentTypeRoutes}/${id}`, params);
       const { data, message, status } = response.data ;
       
       return { data, message, status };

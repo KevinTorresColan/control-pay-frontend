@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { IComboSate, ISchema } from "@/interface";
+import { ICombo, IComboSate, ISchema } from "@/interface";
 import { Select } from "@/components";
 
 interface SelectControllerProps {
@@ -10,7 +10,7 @@ interface SelectControllerProps {
   schema: ISchema;
   shouldUnregister?: boolean;
   disabled?: boolean;
-  data: IComboSate[];
+  data: IComboSate[] | ICombo[];
 }
 
 const SelectController = ({

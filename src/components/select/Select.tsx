@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
   FormControl,
   FormHelperText,
@@ -6,7 +7,6 @@ import {
   Select,
 } from "@mui/material";
 import { ISelect } from "@/interface";
-import { forwardRef } from "react";
 
 const SelectComponent = forwardRef(
   (
